@@ -1,0 +1,27 @@
+{
+  "scripts": {
+    "start": "next",
+    "build": "next build",
+    "format:write": "prettier --write \".\"",
+    "format:check": "prettier --list-different \".\""
+  },
+  "repository": "https://github.com/beaussan/2020-2021-master-projects",
+  "license": "MIT",
+  "dependencies": {
+    "next": "10.0.3",
+    "nextra": "0.3.1",
+    "nextra-theme-docs": "0.3.1",
+    "react": "16.13.1",
+    "react-dom": "16.13.1"
+  },
+  "devDependencies": {
+    "husky": "4.3.0",
+    "prettier": "2.2.1",
+    "pretty-quick": "3.1.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  }
+}
