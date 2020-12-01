@@ -1,6 +1,6 @@
 export default {
   github: 'https://github.com/beaussan/2020-2021-master-projects', // link of the project repo
-  siteGithub: 'https://github.com/shuding/nextra', // link of the docs repo path
+  siteGithub: 'https://2020-2021-master-projects.vercel.app/', // link of the docs repo path
   titleSuffix: ' – Projects',
   nextLinks: true,
   prevLinks: true,
