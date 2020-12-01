@@ -13,11 +13,15 @@
       ]
     }
   ],
-  files: ['README.md', 'pages/index.md'],
+  "files": [
+    "README.md",
+    "./pages/index.md"
+  ],
   "contributorsPerLine": 7,
   "projectName": "2020-2021-master-projects",
   "projectOwner": "beaussan",
   "repoType": "github",
   "repoHost": "https://github.com",
-  "skipCi": true
+  "skipCi": true,
+  "commitConvention": "none"
 }
