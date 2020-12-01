@@ -1,7 +1,4 @@
 {
-  "files": [
-    "README.md"
-  ],
   "imageSize": 100,
   "commit": false,
   "contributors": [
@@ -16,6 +13,7 @@
       ]
     }
   ],
+  files: ['README.md', 'pages/index.md'],
   "contributorsPerLine": 7,
   "projectName": "2020-2021-master-projects",
   "projectOwner": "beaussan",
