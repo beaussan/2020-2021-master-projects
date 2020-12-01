@@ -1,0 +1,12 @@
+{
+  files: ['README.md', 'pages/index.md'],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [],
+  "contributorsPerLine": 7,
+  "projectName": "2020-2021-master-projects",
+  "projectOwner": "beaussan",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
