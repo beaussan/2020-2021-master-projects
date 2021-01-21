@@ -35,4 +35,56 @@ I wanted my game to take some aspect of **Cookie Clicker**, so I made a quick li
 ## Rebirth Hero
 
 With the possibility to start all over the game, I decided to call my game **Rebirth Hero**, I gave the application a
-medieval style because I love this universe :
+medieval style because I love this universe, in the links below we can see the three page of my application :
+
+[Home screen](https://github.com/Unknow46/2020-2021-master-projects/blob/feat/rogue-like-clicker/pages/rogue-like-clicker/home_screen.jpg)
+
+[Game screen](https://github.com/Unknow46/2020-2021-master-projects/blob/feat/rogue-like-clicker/pages/rogue-like-clicker/game_screen.jpg)
+
+[Game over screen](https://github.com/Unknow46/2020-2021-master-projects/blob/feat/rogue-like-clicker/pages/rogue-like-clicker/game_over_screen.jpg)
+
+In order to have a good display of my game I had to do some change at the start of my application :
+
+```
+dynamic main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]).then((_) {
+    runApp(const RebirthHero());
+  });
+}
+```
+
+In the code above I blocked the display of my screen to "portrait", because I found it easier to spam the screen that way.
+I also had for goal to make my application responsive for any kind of devices, so I used two function in order to do so :
+
+```
+  double widthGame(BuildContext context) {
+    return MediaQuery
+        .of(context)
+        .size
+        .width;
+  }
+
+  double heightGame(BuildContext context) {
+    return MediaQuery
+        .of(context)
+        .size
+        .height;
+  }
+```
+
+I used those two functions for the positioning of each widget in my application in order for them to not impact the game
+display, the game itself is composed in two principals widgets :
+
+```
+  Widget moteurDeJeu(BuildContext context) {
+    //Disposition du jeu en colonne
+    return Column(
+      children: <Widget>[
+        game(),
+        shop(),
+      ],
+    );
+  }
+```
