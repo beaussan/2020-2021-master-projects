@@ -44,7 +44,7 @@ La version CentOS 8 est sortie en septembre 2019 et elle a apporter baucoup de c
 
 ## Architecture
 
-![Architecture](./data/Diagramme_V1.svg)
+![Architecture](https://raw.githubusercontent.com/TheNoobProgrammeur/InfluxDB_Server/73df9573363f2f5ca454978a58148a34a4ce8751/img/Diagramme_V1.svg)
 
 ## Les complications
 
