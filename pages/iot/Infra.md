@@ -14,9 +14,9 @@ cepandant l'annonce de la fin de son suport durant le projet fait que si je deva
 
 ## Deploiment par postemant
 
-[^link]: ./iot/index#les-complications
+[probles]: ./iot/index#les-complications
 
-Podman devait me permettre de deployé ma stack sur mon serveur. Pour palier l'absance d'un equivalant de docker compose j'ai crée un script pour géré le déploiment. cependant les problés [^link] qui j'ai rencontre mon fait passer sur du Docker.
+Podman devait me permettre de deployé ma stack sur mon serveur. Pour palier l'absance d'un equivalant de docker compose j'ai crée un script pour géré le déploiment. cependant les [probles] qui j'ai rencontre mon fait passer sur du Docker.
 
 ## Utilisation de docker
 
