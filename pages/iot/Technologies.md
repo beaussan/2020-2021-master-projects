@@ -33,3 +33,5 @@ La version CentOS 8 est sortie en septembre 2019 et elle a apporter baucoup de c
 [Podman](https://podman.io/) est un gestionaire de conteneurisation comme `Docker`. Pousser par `Red Hat` il preomettent notament une meilleur securité des image conteneur. Il permette aussi une comptabilité avec les images docker.
 
 ## Docker
+
+[Docker](https://www.docker.com/) est comme [Podman](./iot/Technologies#podman) un gestionaire de conteneurisation. Leader du marcher il est courament utiliser comme de nombreuse technologier d'ordonancement de contenaire comme k8s. Cepandant des alternative commence a imergé.
