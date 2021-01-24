@@ -6,7 +6,7 @@ You can take a look at my [Github repository](https://github.com/acroquelois/lig
 
 **Account for login:**
 
-email: _losigow264@loopsnow.com_ || password: _M2III2020-2021_
+email: losigow264@loopsnow.com || password: M2III2020-2021
 
 ### Front overview
 
