@@ -41,3 +41,49 @@ Verify the deployment by navigating to your server address in your preferred bro
 ```
 
 # II. Python
+ For the python part I wanted to learn how to use DeepLearning and Computer Vision.
+ For these two reasons I started tutorials about Opencv and Tensorflow.
+ ## 1.Image Classification Tensorflow:
+ The goal of this programme is to train a DeepLearning model in order to be able to classify clothing images.
+ There are 10 classes (T-shirt, basketball...) and 70,000 images in 28x28 divided into two different sets, one for the test part and one for the training part.
+ What I learned:
+ . Review the key words of Deep learning
+ . How to view and edit an image with matplotlib
+ . How to evaluate a multiple classification model
+ The difficulties:
+ . I have already read a book about deep learning, so i was more or less familiar with the concepts mains concepts
+ ## 2.Learn Opencv:
+ During this period I tried to learn how to use opencv.
+ So I went on the documentation (https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_tutorials.html)
+ and I started to read the different tutorials offered.
+ Preferring interactive tutorials, I turned to youtube and a learning tutorial offered by freecodecamp.
+ What I learned:
+ . The basics of opencv
+ . Drawing in a frame
+ . Detecting faces thanks to Haar Cascade
+ . Manipulate the different image transformers (blur, change the scale, draw contours...)
+ . Plot a picture with its pixel density curves
+ The difficulties:
+ . Geometry
+ . Physics related to image processing
+ ## 3.Detect Character in Video with Opencv:
+ After having seen a new video on the subject, I decide to download a royalty-free film.
+ So I recorded locally several faces of characters from this film on a sequence and tried to put a name on a face thanks to Opencv HaarCascade and the algo LBPHFaceRecognizer.
+ What I learned:
+ . Cutting a film
+ . Using a face detection algorithm
+ . Training a model
+ . Save a model
+ Difficulties:
+ .Understanding the method
+ .Understanding how labels work to put the right name on the right face
+ ## 4. Detect If people wearing a mask or not:
+ Mask wear detection here is what I tried to do for this project. I downloaded two dataset of about 400 photos with masked and unmasked people and tried to train a mask recognition model.
+ The results remain bad for the moment, I don't master Opencv enough to optimize the photos processing and to modify the hyperparameters of the model.
+ What I learned:
+ . To better manipulate the images
+ . Manipulating image colours
+ Difficulties:
+ . OpenCV is quite complicated
+ . New and complicated things have a good start.
+ . Despite some tutorial and practical reading, deep learning and computer vision is still complicated for me.
