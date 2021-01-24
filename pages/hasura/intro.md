@@ -54,7 +54,7 @@ For more detail, you have an explanation here:
 
 [Query performance | Hasura GraphQL Docs](https://hasura.io/docs/1.0/graphql/core/queries/performance.html#analysing-query-performance)
 
-## It is possible to use an existing database ?
+## Is it possible to use an existing database ?
 
 In the case you have an existing database, it is possible to "plug" Hasura engine on it, without recreating all tables. You just need to track existing tables and relationships. Once Hasura configurated you can access data from GraphQL endpoint:
 
