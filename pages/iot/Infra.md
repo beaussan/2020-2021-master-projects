@@ -1,23 +1,23 @@
-# L'infra du projet
+# Infrastructure of the project
 
 ![Architecture](https://raw.githubusercontent.com/TheNoobProgrammeur/InfluxDB_Server/73df9573363f2f5ca454978a58148a34a4ce8751/img/Diagramme_V1.svg)
 
-## Les soureces : rasbery PI 3
+## Sources : rasberry PI 3
 
-Le rasberry est un micro ordinateur avec un OS léget. Avec de petit resource il permet cepandant des faire des action interésante. Il est par exemple courament utiliser dans le role de capeteur. C'est a cette fin que je l'utilise pour mon projet.
+Rasberry is a microcomputer with a light OS. WIth little resources it enables however to make interesting actions. It is for instance commonly used as a sensor.It is for this purpose that I am using it in my project.
 
 ## Serveur : VM CentOS 8
 
-J'ai choisis d'utiliser l'os Centos 8 pour voir ces nouvelle fonctionalité.
+I chose to use the OS centOS 8 to see these new functionalities.
 
-cepandant l'annonce de la fin de son suport durant le projet fait que si je devais refaire mes choix technologique je prendrais un autre OS.
+However, the annouce of the end of its support during the project as the consequence that if I had to do my technological choices again, I would take another OS.
 
-## Deploiment par postemant
+## Deployment by postemant
 
-[probles]: ./#les-complications
+[problems]: ./#les-complications
 
-Podman devait me permettre de deployé ma stack sur mon serveur. Pour palier l'absance d'un equivalant de docker compose j'ai crée un script pour géré le déploiment. cependant les [probles] qui j'ai rencontre mon fait passer sur du Docker.
+Podman should have enabled me to deploy my stack on my server. To level the absence of an equivalent docker compose, I created a script to manage the deployment. However, the [problems] I encountered forced me to use docker.
 
-## Utilisation de docker
+## Utilisation deof docker
 
-Pour mes serrvice j'ai utiliser des Image docker pour les deployé notament en les orquestrant avec docker compose.
+For my services, I used docker images to deploy them, in particular by orchestrating them with docker compose.

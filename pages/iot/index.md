@@ -10,59 +10,57 @@ _Author : Antoine BERTHIER_
 
 ## Introduction
 
-Depuis mes debut en informatique j'ai fait énormément de web. Telment que j'en ai fait une over dose. C'est pour cella que dans je projet personelle j'avait la volonté de voire autre chose que du code et des API. Je voulais travailler sur de l'infra et de l'administration systhéme.
+Since I began in computing, I worked a lot on web technologies and on API creations. Because I worked too much on that, I wanted to see something else than code and API in that personal project. I wanted to work on infra and system administration.
 
-C'est de la que mes venue l'idée de monitoring des rasberry. C'etait pour moi un bon projet pour découvrire des technologie d'IoT tel que [InfluxDB] et [Telegraf] ainsie que le deploiment via [Podman] avec quelque micro touche d'administration systhéme notament la découverte de [CentOS8]
+My rasberry monitoring idea came from that. It was for me a good project to discover Iot technologiess such as [InfluxDB] and [Telegraf], but also deployment via [Podman] with few parts of system administration, namely the discovery of [Cent0S8]
 
-## Le projet
+## The project
 
-Le projet initiale était de récupéré les données de capteur branché au raberry. Mais la situation sanitaire ma empecher de recevoire les capeteur à temps. Je me suis donc rabatu sur le monitoring d'information systéme notament les infos CPU et mémoire.
+The initial project was to get back sensor data plugged on the rasberry. However, the health situation prevented me from receving these sensor on time. I therefore changed my initial plans and decided to work on monitoring of system information which includes CPU and memory information.
 
-Pour le monitoring je voulais utiliser [Grafana] qui est une technologie extraimement populaire dans l'affichage de données.
+For the monitoring part I wanted to use [Grafana] which is an extremely popular technology in displaying data.
 
-## Mise en place
+## Implementation
 
-Pour permettre une portabilité la partie Telegraf et recuperation des données sont en docker compose.
+To enable a portability, the Telegraph part that makes possible the recovery of data are in docker compose.
 
-Pour la partie server et le deploiment du [Grafana] et de [InfluxDB], j'utilise un script bash qui crée un `pod` et y lance les conteneur pour les applications.
+For the server part and the deployment of [Grafana] and [influxDB], I used a bash script that creates a `pod` and launches containers for the applications.
 
-- Le depot git de la partie client : https://github.com/TheNoobProgrammeur/telegraf_client
+- The git deposit of client part : https://github.com/TheNoobProgrammeur/telegraf_client
 
-- Le depot git de la partie server : https://github.com/TheNoobProgrammeur/InfluxDB_Server
+- The git deposit of the server part : https://github.com/TheNoobProgrammeur/InfluxDB_Server
 
-Si les services ce lancé bien et que Télégrafe _semblé_ bien ce connecter au serveur influxDB il mes Imposible de récupéré les données depuis [Grafana]
+If the services were well launched and that Telegraf _seemed_ to connect well to the influxDB server, it was impossible to recover the data from [Grafana].
 
-J'ai donc du faire un changement de strategie dans le deploiment server que j'explique par la suite.
+I thus had to change strategy in the server deployment, change that I will explain afterwards.
 
-Quand tous mes services ont finis par bien communiqués j'ai commencer a faire des graph. J'en ai tester quelque un mais je n'ai pas pris le temps d'explorer la création de dashbord plus que ca.
+When all my services finally communicated well, I began to make graphs. I tested some of them, but I didn't take the time to explore the creation of the dashboard more than that.
 
-De plus je n'ai lier qu'un rasberry sur les deux qui utiliser deux tableau de BDD diferant.
+## Complications
 
-## Les complications
+### Problems
 
-### problème
+After the stack implementation I observed that I didn't manage to get data back from [Grafana].
 
-Aprés la mise en place de la stack j'ai pu constater que je n'arriver pas a récupere les données depuis [Grafana].
+I checked the data transmission and the connexion between [telegraf] and [innfluxDB] as well as the connexion between [influxDB] and [Grafana].
 
-J'ai verifier la transmission des donnée et la connection entre [Telegraf] et [InfluxDB] de même que [InfluxDB] et [Grafana].
+I think that the mistake happened in the network interface between the [Podman] `pod` and the VM ports.
 
-Je pense que l'erreur ce produisé dans l'interface réseau entre le `pod` de [Podman] et les port de la VM.
+### Solution
 
-### solution
+To solve this problematic, I decided to use docker compose instead of [Podman]. In the first place Ididn't want to use docker because there were no official deposit for [Cent0S8] because `Red Hat` wanted to spotlight their technology [Podman]. Docker set up thus required to use CentOS 7 deposits. The usage of this solution was the opposite of CentOS philosophy that encourages to use official deposits.
 
-Pour résoudre cette problématique j'ai decidé de passer sur un deploiment en docker-compse. De base je ne voulais pas utiliser Docker car il n'y avait pas de depot officiel pour [CentOS8] car `Red Hat` voulais justement mettre en avant leur technologie [Podman]. L'installation de docker passer donc par l'utilisation des depot de CentOS 7. L'utilisation de cette solution était contraire de la philosophie Centos qui encourage l'utilisation des dépot officiel.
+However, there were changes in CentosOS wishes because a docker compatible setup procedure, CentOS 8 arrived arrived during my project.
 
-Cependant il y a eu changement dans la volonté de CentOS car une procedure d'installation de docker compatible Centos 8 est arrivé durant mon projet.
-
-J'ai donc installer [Docker] sur mon serveur CentOS au détriment de [Podman]. Cette solution ma couter personelment cher car l'utilisation de [Podman] était justement l'un de mes objectif.
+I thus setup [Docker] on my CentOS server at the expense of [Podman]. It was also at the expense of one of my personal objectives which was to discover [Podman].
 
 ## Next Step
 
-Pour finir ce projet il y a deux point important a mettre en place :
+In order to finish this project, there are two important points to implement :
 
-- Solutioné le probléme lier a [Podman] exprimer plus haut.
-- Utiliser une table unique pour géré les données des rasberry.
+- Solve the problem linked to [Podman], as mentionned above.
+- Use a unique table to manage rasberry's data.
 
 ## Conclusion
 
-Durant ce projet j'ai pu toucher de nombreuse technologie et m'ouvrir sur de nouvelle thematique. J'ai aussi pu travailler sur des tache plus administration notament avec la gestion des flux et de VM.
+During this project, I was able to experience many technologies and to open myself on a new thematic. This project also enabled me to work more on system administration with Durant ce projet j'ai pu toucher de nombreuse technologie et m'ouvrir sur de nouvelle thematique. J'ai aussi pu travailler sur des tache plus administration notament avec la gestion des flux et de VM.
