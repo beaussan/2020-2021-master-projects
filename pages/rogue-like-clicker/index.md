@@ -23,14 +23,12 @@ I wanted my game to take some aspect of **Cookie Clicker**, so I made a quick li
 >
 > - having an offline game with a level of difficulty increasing over time,
 > - adding bonus items in order to help the player to pass each level with more ease,
-> - allowing the player to start over the game with his item, in order to gain more money for the level he founded difficult to pass,
+> - allowing the player to start over the game with his item, in order to gain more money for the level he found difficult to pass,
 
 > **Auxiliary goals :**
 >
 > - synchronising the game with a database (Firecloud here), in order to update bosses, items...
-> - allowing the user to share his score when he encounters a game over, the score can later be showed in a website
-
-        which will be used for a ranking system.
+> - allowing the user to share his score when he encounters a game over, the score can later be showed in a website which will be used for a ranking system.
 
 ## Rebirth Hero
 
