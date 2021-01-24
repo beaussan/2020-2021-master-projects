@@ -2,11 +2,11 @@
 
 _Author : Antoine BERTHIER_
 
-[influxdb]: ./iot/Technologies#influx-db
-[telegraf]: ./iot/Technologies#telegraf
-[podman]: ./iot/Technologies#podman
-[centos8]: ./iot/Technologies#cent-os-8
-[grafana]: ./iot/Technologies#grafana
+[influxdb]: /iot/technologies#influx-db
+[telegraf]: /iot/technologies#telegraf
+[podman]: /iot/technologies#podman
+[centos8]: /iot/technologies#cent-os-8
+[grafana]: /iot/technologies#grafana
 
 ## Introduction
 
