@@ -1,6 +1,6 @@
 <h1 align="center">Welcome to 2020-2021-master-projects 👋</h1>
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <p>
   <a href="#" target="_blank">
@@ -45,6 +45,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://github.com/beaussan"><img src="https://avatars0.githubusercontent.com/u/7281023?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Nicolas Beaussart</b></sub></a><br /><a href="#ideas-beaussan" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/beaussan/2020-2021-master-projects/commits?author=beaussan" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/Unknow46"><img src="https://avatars.githubusercontent.com/u/49709624?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Nathan Sens</b></sub></a><br /><a href="#ideas-Unknow46" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/beaussan/2020-2021-master-projects/commits?author=Unknow46" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://aberthier.netlify.app/"><img src="https://avatars.githubusercontent.com/u/34750693?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Antoine Berthier</b></sub></a><br /><a href="#ideas-TheNoobProgrammeur" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/beaussan/2020-2021-master-projects/commits?author=TheNoobProgrammeur" title="Documentation">📖</a></td>
   </tr>
 </table>
 
