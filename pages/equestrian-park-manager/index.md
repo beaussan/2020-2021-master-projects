@@ -3,6 +3,9 @@
 # introduction
 Horse management system is a web application that allow Stable Supervisor to manage their stable and the Horse livery.
 
+**link to the project**
+https://github.com/BBR2394/HorseManagementSystem
+
 ## Project context
 This project  is a student project  that took place in my Master degree at the catholic university  of Lille. The goal is to make a 20 hours project, on the domain of our choice, so, I have chosen  to make a web application.
 The idea of this project came to me when I discuss with my family, that some existing solution to manage stable and horses in this stable, to follow their live and medication. So the final goal was to create a POC of this kind of project.
