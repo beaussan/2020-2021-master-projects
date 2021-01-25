@@ -32,9 +32,12 @@ hasura-graphql:
     - 'postgres'
   environment:
     HASURA_GRAPHQL_DATABASE_URL: postgres://postgres:postgrespassword@postgres:5432
+    HASURA_GRAPHQL_ADMIN_SECRET: questionsecretkey
+    HASURA_GRAPHQL_UNAUTHORIZED_ROLE: anonymous
+    HASURA_GRAPHQL_JWT_SECRET: '{"type":"RS256","jwk_url": "https://www.googleapis.com/service_accounts/v1/jwk/securetoken@system.gserviceaccount.com","audience": "lightweight-back-office-dev","issuer": "https://securetoken.google.com/lightweight-back-office-dev" }'
 ```
 
-Above you have the configuration of my Hasura container. For more details about container configuration you can consult the documentation:
+Above you have the configuration of my Hasura container. I will come back to it in more detail later.
 
 [Run Hasura GraphQL engine using Docker | Hasura GraphQL Docs](https://hasura.io/docs/1.0/graphql/core/deployment/deployment-guides/docker.html#deployment-docker)
 
@@ -62,7 +65,7 @@ Migrations files contain SQL script that builds tables, each migration represent
 
 Metadata is used to configure Hasura, here I need it to configure relationship between tables.
 
-To build my data model I use Hasura console. Exist two ways to access to the console: by the url(http://hasura/console) or by launching it from CLI, the advantage if you are running it from CLI is that modifications applied will be automatically generated in the migrations/ directory and the metadata are exported in the metadata/ directory.
+To build my data model I use Hasura console. Exist two ways to access to the console: by the url(http://hasura/console), if it is activated, or by launching it from CLI, the advantage if you are running it from CLI is that modifications applied will be automatically generated in the migrations/ directory and the metadata are exported in the metadata/ directory.
 
 Launch from CLI:
 
