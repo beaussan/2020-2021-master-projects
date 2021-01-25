@@ -9,9 +9,12 @@ For this project i've choosed to work with **flutter** as it's a crossPLatfom la
 ## Authentication
 
 The first fase of the creation of this app is to create an Authentication flow:
+![Landing](https://i.ibb.co/fXBDVxF/Screenshot-20210125-153206.jpg)
 
 - Subscribe with email and password
+  ![Subscribe](https://i.ibb.co/wCGLpwR/SLiscreenshot-20210125-153228.jpg)
 - Connect with email and password
+  ![Login](https://i.ibb.co/YdcGWkS/Screenshot-20210125-153211.jpg)
 - SigninWithGoogle
 - i've used the silent signin so people can signin silntly even after closing the app
 
@@ -38,14 +41,19 @@ using multipple inputs :
 - Description field
 - Post button
 
+![post1](https://i.ibb.co/M96MXsd/Screenshot-20210125-153257.jpg)
+
 ## Profile page
 
 Classic profile page with a picture of the user in the backgroud t the back
 and a display for diffrent inforamations
+![Profile](https://i.ibb.co/7CNs2KN/Screenshot-20210125-153246.jpg)
+![post2](https://i.ibb.co/9bx1NZG/Screenshot-20210125-153301.jpg)
 
 ## SearchPage
 
 Each time users searches about a journey using the specific criterias it will be redirected to the search page That build a listview containning the results returning by Firebase
+![List1](https://i.ibb.co/Nsp84sq/Screenshot-20210125-153312.jpg)
 
 ## Route Page
 
@@ -60,3 +68,15 @@ in this page i've followed these steps :
   - to calculate the distance i didn't use the Geolocator pulgin to do it.
     it uses the haversine formula to get the distance between 2 points on a sphere.
     i used eucleudian distance between the Polylines and at the end i sum them
+
+![Route1](https://i.ibb.co/dtB3fqn/Screenshot-20210125-153322.jpg)
+![Route2](https://i.ibb.co/LtwQ4Vf/Screenshot-20210125-153336.jpg)
+
+## Difficulties
+
+Major difficulties i've faced is i had to take courses about the way the map API works and also for no sql databases because i've never worked with it
+
+- Other difficulty if that i didn't know that flutter provides redy to use plugins so i lost a lot of time tying to ercreate them from scratch
+- Other thing is my PC died (#smileys--emotion)
+
+[GIT REPO](https://github.com/oussamaHJM/auto_stop)
