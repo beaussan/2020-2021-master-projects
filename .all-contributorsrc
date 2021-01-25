@@ -13,11 +13,22 @@
       ]
     },
     {
-      "login": "nahalu",
-      "name": "Romain M",
-      "avatar_url": "https://avatars.githubusercontent.com/u/24190651?v=4",
-      "profile": "https://github.com/nahalu",
+      "login": "Unknow46",
+      "name": "Nathan Sens",
+      "avatar_url": "https://avatars.githubusercontent.com/u/49709624?v=4",
+      "profile": "https://github.com/Unknow46",
       "contributions": [
+        "ideas",
+        "doc"
+      ]
+    },
+    {
+      "login": "TheNoobProgrammeur",
+      "name": "Antoine Berthier",
+      "avatar_url": "https://avatars.githubusercontent.com/u/34750693?v=4",
+      "profile": "https://aberthier.netlify.app/",
+      "contributions": [
+        "ideas",
         "doc"
       ]
     },
@@ -27,12 +38,23 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/4295352?v=4",
       "profile": "https://github.com/octogene",
       "contributions": [
+        "ideas",
+        "doc"
+      ]
+    },
+    {
+      "login": "nahalu",
+      "name": "Romain M",
+      "avatar_url": "https://avatars.githubusercontent.com/u/24190651?v=4",
+      "profile": "https://github.com/nahalu",
+      "contributions": [
+        "ideas",
         "doc"
       ]
     }
   ],
   "files": [
-    "README.md",
+    "README.md"
   ],
   "contributorsPerLine": 7,
   "projectName": "2020-2021-master-projects",
