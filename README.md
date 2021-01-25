@@ -1,6 +1,6 @@
 <h1 align="center">Welcome to 2020-2021-master-projects 👋</h1>
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <p>
   <a href="#" target="_blank">
@@ -50,6 +50,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/Nahalu"><img src="https://avatars.githubusercontent.com/u/24190651?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Romain</b></sub></a><br /><a href="#ideas-nahalu" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/beaussan/2020-2021-master-projects/commits?author=nahalu" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/octogene"><img src="https://avatars.githubusercontent.com/u/4295352?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Bogdan Cordier</b></sub></a><br /><a href="#ideas-octogene" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/beaussan/2020-2021-master-projects/commits?author=octogene" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/ArilessTir"><img src="https://avatars.githubusercontent.com/u/48951113?v=4?s=100" width="100px;" alt=""/><br /><sub><b>ArilessTir</b></sub></a><br /><a href="#ideas-ArilessTir" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/beaussan/2020-2021-master-projects/commits?author=ArilessTir" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/zaydane-mokni"><img src="https://avatars.githubusercontent.com/u/44756412?v=4?s=100" width="100px;" alt=""/><br /><sub><b>zaydane-mokni</b></sub></a><br /><a href="#ideas-zaydane-mokni" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/beaussan/2020-2021-master-projects/commits?author=zaydane-mokni" title="Documentation">📖</a></td>
   </tr>
 </table>
 
