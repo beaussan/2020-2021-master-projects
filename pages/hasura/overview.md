@@ -1,4 +1,4 @@
-## Overview
+# Overview
 
 You can take a look at my [Github repository](https://github.com/acroquelois/lightweight-back-office)
 
@@ -8,7 +8,7 @@ You can take a look at my [Github repository](https://github.com/acroquelois/lig
 
 email: losigow264@loopsnow.com || password: M2III2020-2021
 
-### Front overview
+## Front overview
 
 _Build with Vue3 et TailwindCss 2_
 

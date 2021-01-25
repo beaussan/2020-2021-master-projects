@@ -1,4 +1,4 @@
-## My use case:
+# My use case:
 
 **Disclaimer**: In the following example, technical choices are probably not the best. But to poke Hasura fonctionnalities I don't want to have complexity in the domain part. So I have chosen a simple use case.
 
@@ -12,15 +12,15 @@ List of services I used:
 - Elastic: used to index questions and store statistic
 - Hasura: used as API gateway
 
-**Architecture schema:**
+## Architecture schema:
 
 ![Architecture schema](https://i.imgur.com/eal2ZuR.jpg)
 
-**Hasura configuration:**
+## Hasura configuration:
 
 In this section I will explain how I configure Hasura to set up the architecture above, in the following explication I will use Hasura CLI to configure my Hasura instance, but it is also possible to make the same configuration with the web interface. I prefer to use CLI for automation and reusability. For some task I use the web interface because it's easier and faster than CLI, for these parts I will not go into the details of the web interface because it is very clear.
 
-**1) Run Hasura with docker-compose:**
+### 1) Run Hasura with docker-compose:
 
 ```yaml
 hasura-graphql:
@@ -41,7 +41,7 @@ Above you have the configuration of my Hasura container. I will come back to it 
 
 [Run Hasura GraphQL engine using Docker | Hasura GraphQL Docs](https://hasura.io/docs/1.0/graphql/core/deployment/deployment-guides/docker.html#deployment-docker)
 
-**2) Init Hasura CLI**
+### 2) Init Hasura CLI
 
 ```bash
 hasura init --endpoint https://my-graphql-engine.com
@@ -49,7 +49,7 @@ hasura init --endpoint https://my-graphql-engine.com
 
 This command initializes a folder that contains all files needed to configure your Hasura instance, just need to specify your grahql endpoint. The generated folder could be stored where you want, alongside your front files for example.
 
-**3) Build database schemas:**
+### 3) Build database schemas:
 
 **MPD of my data model:**
 
@@ -194,7 +194,7 @@ For more details about data model update:
 
 [Setting up Hasura migrations | Hasura GraphQL Docs](https://hasura.io/docs/1.0/graphql/core/migrations/migrations-setup.html)
 
-**4) Add event trigger**
+### 4) Add event trigger
 
 Now I need to add an event trigger on update field "isPublie" from "Questions" tables to call an endpoint who will index the concerned question in an Elasticsearch index, I did it using the web interface and the operations automatically edit **tables.yml:**
 
@@ -239,7 +239,7 @@ Now each time "IsPublie" field will be modified a http request will be send to t
 
 [Event Triggers | Hasura GraphQL Docs](https://hasura.io/docs/1.0/graphql/core/event-triggers/index.html)
 
-**5) Add authentification and authorization**
+### 5) Add authentification and authorization
 
 In my case I use JWT token for authentification and authorization. I need user account with credentials to log in my back office. Firebase provide authentication system to manage this case.
 
@@ -354,6 +354,6 @@ Now I can fetch data as user
 
 [Authentication & Authorization | Hasura GraphQL Docs](https://hasura.io/docs/1.0/graphql/core/auth/index.html)
 
-**6) And then ?**
+### 6) And then ?
 
 Once your Hasura instance is configure you can fetch data from its GraphQL endpoint. During the development if the domain evolved you can use migration to change your data models and you can add action or event trigger throughout development.
