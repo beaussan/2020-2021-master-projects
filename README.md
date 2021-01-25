@@ -1,6 +1,6 @@
 <h1 align="center">Welcome to 2020-2021-master-projects 👋</h1>
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-9-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-10-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <p>
   <a href="#" target="_blank">
@@ -54,6 +54,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/BBR2394"><img src="https://avatars.githubusercontent.com/u/9862994?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Baptiste Bertrand</b></sub></a><br /><a href="#ideas-BBR2394" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/beaussan/2020-2021-master-projects/commits?author=BBR2394" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/oussamaHJM"><img src="https://avatars.githubusercontent.com/u/43934011?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Oussama</b></sub></a><br /><a href="#ideas-oussamaHJM" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/beaussan/2020-2021-master-projects/commits?author=oussamaHJM" title="Documentation">📖</a></td>
   </tr>
 </table>
 
