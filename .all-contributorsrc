@@ -63,10 +63,20 @@
       ]
     },
     {
-      "login": "zaydane-mokni",
-      "name": "zaydane-mokni",
-      "avatar_url": "https://avatars.githubusercontent.com/u/44756412?v=4",
-      "profile": "https://github.com/zaydane-mokni",
+      "login": "ArilessTir",
+      "name": "ArilessTir",
+      "avatar_url": "https://avatars.githubusercontent.com/u/48951113?v=4",
+      "profile": "https://github.com/ArilessTir",
+      "contributions": [
+        "ideas",
+        "doc"
+      ]
+    },
+    {
+      "login": "ArilessTir",
+      "name": "ArilessTir",
+      "avatar_url": "https://avatars.githubusercontent.com/u/48951113?v=4",
+      "profile": "https://github.com/ArilessTir",
       "contributions": [
         "ideas",
         "doc"
@@ -76,7 +86,7 @@
   "files": [
     "README.md"
   ],
-  "contributorsPerLine": 7,
+  "contributorsPerLine": 8,
   "projectName": "2020-2021-master-projects",
   "projectOwner": "beaussan",
   "repoType": "github",
