@@ -1,4 +1,6 @@
-![Logo](https://i.postimg.cc/mk0VQ4v6/Screenshot-20210124-181145.png)
+[![Logo](https://i.postimg.cc/gjRCc0Fc/title.png)]()
+
+<iframe frameborder="0" src="https://itch.io/embed/894313" width="552" height="167"><a href="https://octogene.itch.io/do-not-stop-me-now">Do not stop me now by octogene, Nahalu</a></iframe>
 
 # Gameplay
 
