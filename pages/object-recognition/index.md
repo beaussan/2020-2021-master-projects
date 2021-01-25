@@ -9,6 +9,10 @@ What we already did, is to identify a person given an image of his / her face. T
 Depending on the requirements of our project we loaded some models that we need, the model files are available on the repo and can be found here: 
 https://github.com/justadudewhohacks/face-api.js/tree/master/weights
 The model files can simply be provided as static assets in your web app or you can host them somewhere else and they can be loaded by specifying the route or URL to the files.
+#### What we learned:
+- The basics of Face-api.js.
+- build an face detection and recognition app using Face-api.js.
+- how to use Face-api.js models.
 #### Installation : 
 Install the dependencies and start the server.
 ```sh
@@ -24,6 +28,10 @@ Verify the deployment by navigating to your server address in your preferred bro
 In this project, we explored TensorFlow.js, and the Coco SSD model for object detection.
 The task of image classification is a staple deep learning application. You feed an image to the model, and it tells you its label, so our main idea is to create a simple React web app that takes as input your webcam live video feed and sends its frames to a pre-trained COCO SSD model to detect objects on it. 
 To achieve our goals, we used COCO-SSD model which is a TensorFlow.js model that aims to localize and identify multiple objects in a single image, this model detects objects defined in the COCO dataset which is a large-scale object detection, segmentation, and captioning dataset.
+#### What we learned:
+- The basics of TensorFlow.js.
+- build an object detection web app using TensorFlow.js.
+- use COCO SSD model.
 #### Installation : 
 Start the server Python 3.
 ```sh
@@ -57,33 +65,33 @@ Verify the deployment by navigating to your server address in your preferred bro
  So we went on the documentation (https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_tutorials.html)
  and we started to read the different tutorials offered.
  Preferring interactive tutorials, we turned to youtube and a learning tutorial offered by freecodecamp.
- What we learned:
- . The basics of opencv
- . Drawing in a frame
- . Detecting faces thanks to Haar Cascade
- . Manipulate the different image transformers (blur, change the scale, draw contours...)
- . Plot a picture with its pixel density curves
- The difficulties:
- . Geometry
- . Physics related to image processing
+ #### What we learned:
+ - The basics of opencv
+ - Drawing in a frame
+ - Detecting faces thanks to Haar Cascade
+ - Manipulate the different image transformers (blur, change the scale, draw contours...)
+- Plot a picture with its pixel density curves
+ #### The difficulties:
+ - Geometry
+ - Physics related to image processing
  ## 3.Detect Character in Video with Opencv:
  After having seen a new video on the subject, we decide to download a royalty-free film.
  So we recorded locally several faces of characters from this film on a sequence and tried to put a name on a face thanks to Opencv HaarCascade and the algo LBPHFaceRecognizer.
- What we learned:
- . Cutting a film
- . Using a face detection algorithm
- . Training a model
- . Save a model
- Difficulties:
- .Understanding the method
- .Understanding how labels work to put the right name on the right face
+ #### What we learned:
+ - Cutting a film
+ - Using a face detection algorithm
+ - Training a model
+ - Save a model
+ #### Difficulties:
+ - Understanding the method
+ - Understanding how labels work to put the right name on the right face
  ## 4. Detect If people wearing a mask or not:
  Mask wear detection here is what we tried to do for this project. we downloaded two dataset of about 400 photos with masked and unmasked people and tried to train a mask recognition model.
  The results remain bad for the moment, we don't master Opencv enough to optimize the photos processing and to modify the hyperparameters of the model.
- What we learned:
- . To better manipulate the images
- . Manipulating image colours
- Difficulties:
- . OpenCV is quite complicated
- . New and complicated things have a good start.
- . Despite some tutorial and practical reading, deep learning and computer vision is still complicated for us.
+ #### What we learned:
+ - To better manipulate the images
+ - Manipulating image colours
+ #### Difficulties:
+ - OpenCV is quite complicated
+ - New and complicated things have a good start.
+ - Despite some tutorial and practical reading, deep learning and computer vision is still complicated for us.
