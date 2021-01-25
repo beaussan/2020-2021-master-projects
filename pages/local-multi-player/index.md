@@ -55,6 +55,7 @@ This allows us to synchronise the server and the clients with each other.
 # External resource
 
 **Project Gitlab :** https://gitlab.com/bransle/do-not-stop-me-now ( Ask permission to access the project )  
+**Download project :** https://octogene.itch.io/do-not-stop-me-now ( Ask password to octogene )  
 **Godot documentation :** https://docs.godotengine.org/en/stable/index.html  
 **Godot Patreon :** https://www.patreon.com/godotengine  
 **Itch.io assets :** https://pixelfrog-store.itch.io/pirate-bomb
