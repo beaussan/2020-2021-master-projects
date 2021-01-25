@@ -46,7 +46,7 @@ _You can configure it with code to(Hasura CLI)._
 
 In this part we are outside of the Hasura scope, but you can keep in mind that Graphql can also increase your development speed in the front part of your application. With tool like [GraphQL Code Generator](<[https://graphql-code-generator.com/](https://graphql-code-generator.com/)>) you can generate typescript code that contains queries, mutation, subscription and entities.
 
-## Performence:
+## Performence
 
 Hasura come with a caching system that reduce the cost of requests. Above we have seen that Hasura convert your graphql request into a prepared statement that it will execute on Postgres. This statement is store in a caching system, in case you fetch the same request. The stored statement can be called if the request is exactly the same or if parameters have changed.
 

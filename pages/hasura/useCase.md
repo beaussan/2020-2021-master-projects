@@ -1,4 +1,4 @@
-# My use case:
+# My use case
 
 **Disclaimer**: In the following example, technical choices are probably not the best. But to poke Hasura fonctionnalities I don't want to have complexity in the domain part. So I have chosen a simple use case.
 
@@ -12,15 +12,15 @@ List of services I used:
 - Elastic: used to index questions and store statistic
 - Hasura: used as API gateway
 
-## Architecture schema:
+## Architecture schema
 
 ![Architecture schema](https://i.imgur.com/eal2ZuR.jpg)
 
-## Hasura configuration:
+## Hasura configuration
 
 In this section I will explain how I configure Hasura to set up the architecture above, in the following explication I will use Hasura CLI to configure my Hasura instance, but it is also possible to make the same configuration with the web interface. I prefer to use CLI for automation and reusability. For some task I use the web interface because it's easier and faster than CLI, for these parts I will not go into the details of the web interface because it is very clear.
 
-### 1) Run Hasura with docker-compose:
+### 1) Run Hasura with docker-compose
 
 ```yaml
 hasura-graphql:
@@ -49,7 +49,7 @@ hasura init --endpoint https://my-graphql-engine.com
 
 This command initializes a folder that contains all files needed to configure your Hasura instance, just need to specify your grahql endpoint. The generated folder could be stored where you want, alongside your front files for example.
 
-### 3) Build database schemas:
+### 3) Build database schemas
 
 **MPD of my data model:**
 
