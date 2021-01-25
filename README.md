@@ -1,6 +1,6 @@
 <h1 align="center">Welcome to 2020-2021-master-projects 👋</h1>
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <p>
   <a href="#" target="_blank">
@@ -48,6 +48,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://aberthier.netlify.app/"><img src="https://avatars.githubusercontent.com/u/34750693?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Antoine Berthier</b></sub></a><br /><a href="#ideas-TheNoobProgrammeur" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/beaussan/2020-2021-master-projects/commits?author=TheNoobProgrammeur" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/acroquelois"><img src="https://avatars.githubusercontent.com/u/49721708?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Adrien</b></sub></a><br /><a href="#ideas-acroquelois" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/beaussan/2020-2021-master-projects/commits?author=acroquelois" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/Nahalu"><img src="https://avatars.githubusercontent.com/u/24190651?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Romain</b></sub></a><br /><a href="#ideas-nahalu" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/beaussan/2020-2021-master-projects/commits?author=nahalu" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/octogene"><img src="https://avatars.githubusercontent.com/u/4295352?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Bogdan Cordier</b></sub></a><br /><a href="#ideas-octogene" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/beaussan/2020-2021-master-projects/commits?author=octogene" title="Documentation">📖</a></td>
   </tr>
 </table>
 
