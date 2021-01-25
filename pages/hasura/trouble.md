@@ -1,6 +1,6 @@
 # Troubleshootind
 
-## Database connection:
+## Database connection
 
 I add this section because I encounter some troubles when I tryed to connect Hasura to a remote database:
 
@@ -20,7 +20,7 @@ After some research I found a [postgreSQL issue](https://www.postgresql.org/mess
 
 So I tried to run the same snapshot on Linux system and I didn't encounter trouble.
 
-## Token validation:
+## Token validation
 
 When I try to log in from my application, Hasura send me a JWT token but when I make my first call with this token I get this error:
 
