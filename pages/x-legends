@@ -1,0 +1,17 @@
+Documentation of the X-legends game project :
+
+Objectives: 
+The objective was to design an online rpg web game where you can choose your avatar among the most powerful warlords of the fictional world of NeoGrantia.
+It will be a question of leading his character to the final victory by fighting all the bosses of the game in order to become the master of the world.
+
+
+The technology used is angular, all the characters have classic rpg characteristics, namely a main pv statistic that drops to zero when you lose and an attack statistic.
+
+The difficulties I encountered were mainly in the animation of the fights, with the set of tools offered by Angular I could not do exactly what I had in mind, so the game remains rather static.
+
+Concerning the schema of the game it is quite classical:
+
+First of all, it has a welcome interface. When you start the game, you can first choose an avatar from the list, each one being master of his territory, so you can consult their statistics before you can start to conquer the game.
+
+
+Link github: https://github.com/TCHAKPELE/aclab_X-game/tree/main/X-legends
