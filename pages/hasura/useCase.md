@@ -41,7 +41,7 @@ Above you have the configuration of my Hasura container. For more details about 
 **2) Init Hasura CLI**
 
 ```bash
-hasura init **--endpoint https://my-graphql-engine.com**
+hasura init --endpoint https://my-graphql-engine.com
 ```
 
 This command initializes a folder that contains all files needed to configure your Hasura instance, just need to specify your grahql endpoint. The generated folder could be stored where you want, alongside your front files for example.
@@ -217,7 +217,7 @@ Now I need to add an event trigger on update field "isPublie" from "Questions" t
         num_retries: 0
         interval_sec: 10
         timeout_sec: 60
-      webhook: "http://indexation-api/indexquestion"**
+      webhook: 'http://indexation-api/indexquestion'
   array_relationships:
     - name: QuestionPropositions
       using:
@@ -228,15 +228,19 @@ Now I need to add an event trigger on update field "isPublie" from "Questions" t
             name: QuestionPropositions
 ```
 
+Operation that I made in web interface:
+
+![event](https://i.imgur.com/0B5kV7K.png)
+
 Now each time "IsPublie" field will be modified a http request will be send to the webhook with a payload that contain lots of information and particularly the old and new value of the field.
 
 [Event Triggers | Hasura GraphQL Docs](https://hasura.io/docs/1.0/graphql/core/event-triggers/index.html)
 
-**5) Add authentication and authorization**
+**5) Add authentification and authorization**
 
 In my case I use JWT token for authentification and authorization. I need user account with credentials to log in my back office. Firebase provide authentication system to manage this case.
 
-First step is to specify which token provider I will use to make Hasura able to verify token validity, in my case it's Google token service. To have all access in Hasura console it's usefull to specify an admint secret:
+First step is to specify witch token provider I will use to make Hasura able to verify token validity, in my case it's Google token service. To have all access in Hasura console it's usefull to specify an admint secret to:
 
 ```yaml
 hasura:
@@ -252,21 +256,49 @@ hasura:
     HASURA_GRAPHQL_JWT_SECRET: '{"type":"RS256","jwk_url": "https://www.googleapis.com/service_accounts/v1/jwk/securetoken@system.gserviceaccount.com","audience": "lightweight-back-office-dev","issuer": "https://securetoken.google.com/lightweight-back-office-dev" }'
 ```
 
-Second step is to create a http endpoint who verify credential passed in request and build a JWT token who attests users identity. In documentation Hasura gives required properties for JWT token, for instance you have to specify user id and user role. To build and return JWT token I used Firebase Functions:
+In my application I will use Hasura action to get token from the server. The action will allow us to send user credentials, username and password, and will return us JWT token if credentials are valid. **Disclamer:** Is not the best way to get JWT token but here I want to use Hasura as API Gateway(and test Hasura action).
+
+So we need a Firebase function to claim user on creation, here we give role "user" to connected user:
 
 ```tsx
-import { adminApp, firebaseApp, func } from '../config';
+import * as functions from 'firebase-functions';
+import { adminApp, region } from '../config';
+
+// On sign up.
+exports.processSignUp = functions
+  .region(region)
+  .auth.user()
+  .onCreate((user: any) => {
+    functions.logger.info(`create claims for user ${user.uid}`);
+    const customClaims = {
+      'https://hasura.io/jwt/claims': {
+        'x-hasura-default-role': 'user',
+        'x-hasura-allowed-roles': ['user'],
+        'x-hasura-user-id': user.uid,
+      },
+    };
+
+    return adminApp.auth().setCustomUserClaims(user.uid, customClaims);
+  });
+```
+
+And we need a Firebase function who take user credentials and return a JWT token with Hasura claims if credentials are valid:
+
+```tsx
+import * as functions from 'firebase-functions';
+import { userApp, region } from '../config';
 
 const express = require('express');
-
 const app = express();
+const cors = require('cors');
+
+app.use(cors({ origin: true }));
 app.use(express.json());
 
 type AuthEntity = {
   username: string;
   password: string;
 };
-
 function getCredentialsFromBody(body: any): AuthEntity {
   const {
     input: {
@@ -279,55 +311,46 @@ function getCredentialsFromBody(body: any): AuthEntity {
   };
 }
 
-function getUidFromResponse(body: any): string {
-  const {
-    user: { uid },
-  } = body;
-  return uid;
-}
-
-function getTokenFromFirebase(auth: AuthEntity): Promise<any> {
-  return firebaseApp
-    .auth()
-    .signInWithEmailAndPassword(auth.username, auth.password);
-}
-
 app.post('/', function (req: any, res: any) {
   try {
     const auth = getCredentialsFromBody(req.body);
-    getTokenFromFirebase(auth)
-      .then((data: any) => {
-        const uid = getUidFromResponse(data);
-        console.log(`[INFO]: Logged as: ${uid}`);
-        if (!uid) res.status(400).json({ msg: 'No uid returned' });
-        adminApp
-          .auth()
-          .createCustomToken(uid)
-          .then((customToken: any) => {
-            res.status(200).json({ accessToken: customToken });
-          })
-          .catch((error: any) => {
-            res.status(400).json({ msg: `Error on token creation: ${error}` });
-          });
+    userApp
+      .auth()
+      .signInWithEmailAndPassword(auth.username, auth.password)
+      .then((user) => {
+        user.user?.getIdTokenResult().then((idToken) => {
+          res.status(200).json({ accessToken: idToken.token });
+        });
       })
       .catch((error: any) => {
-        console.log(`[INFO]: Error Loggin: ${error}`);
+        functions.logger.info(`Error Loggin: ${error}`);
         res.status(400).json({ msg: error });
       });
   } catch (e) {
-    console.log(`[ERROR]: Error in the payload: ${e}`);
+    functions.logger.error(`Error in the payload: ${e}`);
     res.status(400).json({ msg: 'Error in the payload' });
   }
 });
-
 // Expose Express API as a single Cloud Function:
-exports.getToken = func.https.onRequest(app);
+exports.getToken = functions.region(region).https.onRequest(app);
 ```
 
-Next step is to specify which data user role can access. In Hasura console you have a permission tab for each datatable where you could set different restriction for each role. It could be very specify if you want, in my case I have granted access to all tables for the user role.
+Now I need to create the action in Hasura, I will use the web interface:
+
+![action](https://i.imgur.com/Uyqth2k.png)
+
+After that I need to specify the JWT token in request header, to be considered as authentificated user:
+
+![header](https://i.imgur.com/kvy6Rp6.png))
+
+Next step is to specify witch data user role can access. It could be very specify if you want, in my case I need to grant access to all tables for the user role:
+
+![permision](https://i.imgur.com/1DbLaAv.png)
+
+Now I can fetch data as user
 
 [Authentication & Authorization | Hasura GraphQL Docs](https://hasura.io/docs/1.0/graphql/core/auth/index.html)
 
 **6) And then ?**
 
-Once your Hasura instance is configure you can fetch data from it GraphQL endpoint. During the development if the domain evolved you can use migration to change your data models and you can add action or event trigger throughout development.
+Once your Hasura instance is configure you can fetch data from its GraphQL endpoint. During the development if the domain evolved you can use migration to change your data models and you can add action or event trigger throughout development.
