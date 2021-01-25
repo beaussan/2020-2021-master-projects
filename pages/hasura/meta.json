@@ -1,3 +1,6 @@
 {
-  "index": "Intro"
+  "intro": "Presentation",
+  "useCase": "My use Case",
+  "trouble": "Troubleshoting",
+  "overview": "Overview"
 }

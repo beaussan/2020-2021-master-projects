@@ -31,8 +31,8 @@ yarn run start
 
 👤 **beaussan**
 
-* Twitter: [@beaussan](https://twitter.com/beaussan)
-* Github: [@beaussan](https://github.com/beaussan)
+- Twitter: [@beaussan](https://twitter.com/beaussan)
+- Github: [@beaussan](https://github.com/beaussan)
 
 ## Contributors ✨
 
