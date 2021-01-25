@@ -11,6 +11,24 @@
         "ideas",
         "doc"
       ]
+    },
+    {
+      "login": "nahalu",
+      "name": "Romain M",
+      "avatar_url": "https://avatars.githubusercontent.com/u/24190651?v=4",
+      "profile": "https://github.com/nahalu",
+      "contributions": [
+        "local-multi-player"
+      ]
+    },
+    {
+      "login": "octogene",
+      "name": "Bogdan C",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4295352?v=4",
+      "profile": "https://github.com/octogene",
+      "contributions": [
+        "local-multi-player"
+      ]
     }
   ],
   "files": [
