@@ -49,4 +49,14 @@ Each time users searches about a journey using the specific criterias it will be
 
 ## Route Page
 
-it's the page that can display the route and calculate the distance between the two cities in the input
+it's the page that can display the route and calculate the distance between the two cities: the cities are already givin in parameter to the page.
+
+in this page i've followed these steps :
+
+- Use Geocoding to translate coordinates into a place address then get their Lat and Long
+- Putting the markers of the cities
+- Use [Polylines](https://pub.dev/packages/flutter_polyline_points) for drawing route between two places
+- Calculate distance of that route:
+  - to calculate the distance i didn't use the Geolocator pulgin to do it.
+    it uses the haversine formula to get the distance between 2 points on a sphere.
+    i used eucleudian distance between the Polylines and at the end i sum them
