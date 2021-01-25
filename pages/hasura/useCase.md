@@ -1,6 +1,6 @@
 ## My use case:
 
-**Disclaimer**: In the following example, technical choices are probably not the best. But to poke all fonctionnality of Hasura I don't want to have complexity in the domain part. So I have chosen a simple use case.
+**Disclaimer**: In the following example, technical choices are probably not the best. But to poke Hasura fonctionnalities I don't want to have complexity in the domain part. So I have chosen a simple use case.
 
 I want to build a back office interface to manage a pool of question. I would like to provide various questions in my quizz game, so I need to frequently add new questions and delete others. In my case I want to rotate questions, a question could be publish(available in the game) or not publish. I also want to have a follow-up on questions statistic(currency, good/bad answer...). API calls will be secured by JWT token.
 
